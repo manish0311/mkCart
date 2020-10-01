@@ -7,7 +7,7 @@ from .PayTm import Checksum
 # Create your views here.
 from django.http import HttpResponse
 
-MERCHANT_KEY = 'kbzk1DSbJiV_O3p5'
+MERCHANT_KEY = 'YOUR-MERCHANT-KEY'
 
 
 def index(request):
@@ -117,7 +117,7 @@ def checkout(request):
         # Request paytm to transfer the amount to your account after payment by user
         param_dict = {
 
-            'MID': 'WorldP64425807474247',
+            'MID': 'YOUR-MERCHANT-ID',
             'ORDER_ID': str(order.order_id),
             'TXN_AMOUNT': str(amount),
             'CUST_ID': email,
